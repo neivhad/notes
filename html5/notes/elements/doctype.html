@@ -1,0 +1,24 @@
+<!--
+The DOCTYPE declaration instructs the user agent follow the specified specification
+If omitted, user agents use the quirks rendering mode
+Valid dtd (Document Type Definition) list: https://www.w3.org/QA/2002/04/valid-dtd-list.html
+
+<!doctype html SYSTEM 'about:legacy-compat'> is used by HTML generators that don't support the short doctype
+<!doctype html SYSTEM 'about:legacy-compat'> is the same as <!doctype html>
+
+Browser rendering modes:
+ - quirks mode:         follows quirks mode spec: https://quirks.spec.whatwg.org/
+ - limited-quirks mode: triggered by some public identifiers (see dtd-list above)
+ - no-quirks mode:      follows standard (latest and modern) specs
+See: https://html.spec.whatwg.org/multipage/parsing.html#the-initial-insertion-mode
+
+JS
+ - `document.compatMode`: https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode
+ - `document.doctype`   : https://developer.mozilla.org/en-US/docs/Web/API/Document/doctype
+
+Links:
+ - https://html.spec.whatwg.org/multipage/syntax.html#the-doctype
+ - https://developer.mozilla.org/en-US/docs/Glossary/Doctype
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
+-->
+<!doctype html>
