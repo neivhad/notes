@@ -1,0 +1,40 @@
+<!-- 
+The <base> element allows authors to specify the document base URL for the purposes of parsing URLs,
+and the name of the default navigable for the purposes of following hyperlinks.
+The element does not represent any content beyond this information
+
+Categories:
+ - metadata content
+
+Contexts in which this element can be used:
+ - in a <head> element containing no other <base> elements
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - `href`:   document base URL
+ - `target`: default navigable for hyperlink navigation and form submission
+A <base> element must have either an `href` attribute, a `target` attribute, or both
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-base
+
+
+ - A <base> element, if it has an `href` attribute, must come before any other elements in the tree
+that have attributes defined as taking URLs.
+If it has a target attribute, must come before any elements in the tree that represent hyperlinks.
+ - If there are multiple <base> elements with `href` or `target` attributes, all but the first are ignored
+
+
+Links:
+ - https://html.spec.whatwg.org/multipage/semantics.html#the-base-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My Title</title>
+    <base href="https://example.com" target="_blank" />
+  </head>
+  <body></body>
+</html>
