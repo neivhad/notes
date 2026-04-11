@@ -1,0 +1,29 @@
+<!-- 
+The <head> element represents a collection of metadata for the Document
+
+Categories:
+ - none
+
+Contexts in which this element can be used:
+ - as the first element in an <html> element
+
+Content model:
+ - If the document is an <iframe> srcdoc document or if title information is available from a higher-level protocol:
+ Zero or more elements of `metadata content`, of which no more than one is a <title> element and no more than one is a <base> element.
+ Otherwise: One or more elements of metadata content, of which exactly one is a title element and no more than one is a <base> element
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-head
+
+Links:
+ - https://html.spec.whatwg.org/multipage/semantics.html#the-head-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My Title</title>
+  </head>
+  <body></body>
+</html>
