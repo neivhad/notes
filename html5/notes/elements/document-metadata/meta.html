@@ -1,0 +1,47 @@
+<!-- 
+The <meta> element represents various kinds of metadata that cannot be expressed using
+the <title>, <base>, <link>, <style>, and <script> elements
+
+Categories:
+ - metadata content
+ - if the `itemprop` attribute is present: flow content, phrasing content
+
+Contexts in which this element can be used:
+ - if the charset attribute is present, or if the element's http-equiv attribute is in the Encoding declaration state:
+ in a <head> element
+ - if the http-equiv attribute is present but not in the Encoding declaration state:
+ in a <head> element or in a noscript element that is a child of a head element
+ - if the name attribute is present: where metadata content is expected
+ - If the itemprop attribute is present: where metadata or phrasing content is expected
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - name: Metadata name
+ - http-equiv: Pragma directive
+ - content: Value of the element
+ - charset: Character encoding declaration
+ - media: Applicable media
+Exactly one of the name, http-equiv, charset, and itemprop attributes must be specified
+If either name, http-equiv, or itemprop is specified, then the content attribute must also be specified. Otherwise, it must be omitted
+
+Accessibility considerations: https://w3c.github.io/html-aria/
+
+ - A <base> element, if it has an `href` attribute, must come before any other elements in the tree
+that have attributes defined as taking URLs.
+If it has a target attribute, must come before any elements in the tree that represent hyperlinks.
+ - If there are multiple <base> elements with `href` or `target` attributes, all but the first are ignored
+
+Links:
+ - https://html.spec.whatwg.org/multipage/semantics.html#the-meta-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My Title</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+</html>
