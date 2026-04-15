@@ -1,46 +1,46 @@
 <!-- 
-The <link> element allows authors to link their document to other resources
+The <link> element links the document to other resources
 
 Categories:
  - metadata content
- - if the element is allowed in the body: flow content, phrasing content
+ - if allowed in the body: flow content, phrasing content
 
 Contexts in which this element can be used:
  - where metadata content is expected
- - in a noscript element that is a child of a <head> element
- - if the element is allowed in the body: where phrasing content is expected
+ - in a <noscript> element that is a child of a <head> element
+ - if allowed in the body: where phrasing content is expected
 
 Content model:
  - Nothing
 
 Attributes:
  - global
- - href - address of the hyperlink 
- - crossorigin - how the element handles crossorigin requests 
- - rel - relationship between the document containing the hyperlink and the destination resource 
- - media - applicable media 
- - integrity - integrity metadata used in Subresource Integrity checks [SRI] 
- - hreflang - language of the linked resource 
- - type - hint for the type of the referenced resource 
- - referrerpolicy - referrer policy for fetches initiated by the element 
- - sizes - sizes of the icons (for rel="icon") 
- - imagesrcset - images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel="preload") 
- - imagesizes - image sizes for different page layouts (for rel="preload") 
- - as - destination for a preload request (for rel="preload" and rel="modulepreload") 
- - blocking - whether the element is potentially render-blocking 
- - color - color to use when customizing a site's icon (for rel="mask-icon") 
- - disabled - whether the link is disabled 
- - fetchpriority - sets the priority for fetches initiated by the element 
-The `title` attribute has special semantics on this element: Title of the link; CSS style sheet set name 
-One or both of the `href` or `imagesrcset` attributes must be present.
+ - href - address of the hyperlink
+ - crossorigin - how the element handles crossorigin requests
+ - rel - relationship between the document containing the hyperlink and the destination resource
+ - media - applicable media
+ - integrity - integrity metadata used in Subresource Integrity checks [SRI]
+ - hreflang - language of the linked resource
+ - type - hint for the type of the referenced resource
+ - referrerpolicy - referrer policy for fetches initiated by the element
+ - sizes - sizes of the icons (for rel="icon")
+ - imagesrcset - images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel="preload")
+ - imagesizes - image sizes for different page layouts (for rel="preload")
+ - as - destination for a preload request (for rel="preload" and rel="modulepreload")
+ - blocking - whether the element is potentially render-blocking
+ - color - color to use when customizing a site's icon (for rel="mask-icon")
+ - disabled - whether the link is disabled
+ - fetchpriority - sets the priority for fetches initiated by the element
+The `title` attribute has special semantics on this element: Title of the link; CSS style sheet set name
+One or both of the `href` or `imagesrcset` attributes must be present
 Must have either a `rel` attribute or an `itemprop` attribute, but not both
-
-Accessibility considerations: https://w3c.github.io/html-aria/#el-link
 
  - the address of the link(s) is given by the `href` attribute
  - the types of link indicated (the relationships) are given by the value of the `rel` attribute
- - if a link element has an `itemprop` attribute, or has a `rel` attribute that contains only keywords
- that are body-ok, then the element is said to be allowed in the body
+ - if a <link> element has an `itemprop` attribute, or has a `rel` attribute that contains only keywords
+ that are body-ok, then the element is allowed in the body
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-link
 
 Links:
  - https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
@@ -50,7 +50,7 @@ Links:
   <head>
     <meta charset="UTF-8" />
     <title>My Title</title>
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body></body>
 </html>
