@@ -1,11 +1,11 @@
 <!-- 
-The body element represents the contents of the document
+The <body> element represents the contents of the document
 
 Categories:
  - None
 
 Contexts in which this element can be used:
- - as the second element in an html element
+ - as the second element in an <html> element
 
 Content model:
  - Flow content
@@ -30,8 +30,14 @@ Attributes:
  - onstorage
  - onunhandledrejection
  - onunload
+The body element exposes as "event handler content attributes" a number of the event handlers of the `Window` object
 
-Accessibility considerations: https://w3c.github.io/html-aria/
+ - The event handlers of the Window object named by
+ the "Window-reflecting body element event handler set"
+ (https://html.spec.whatwg.org/multipage/webappapis.html#window-reflecting-body-element-event-handler-set),
+ exposed on the <body> element, replace the generic event handlers with the same names normally supported by HTML elements
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-body
 
 Links:
  - https://html.spec.whatwg.org/multipage/sections.html#the-body-element
