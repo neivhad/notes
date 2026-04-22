@@ -1,6 +1,6 @@
 <!-- 
-The section element represents a generic section of a document or application.
-A section, in this context, is a thematic grouping of content, typically with a heading
+The <section> element represents a generic section of a document or application.
+A <section>, in this context, is a thematic grouping of content, typically with a heading
 
 Categories:
  - Flow content
@@ -16,10 +16,20 @@ Content model:
 Attributes:
  - global
 
-Accessibility considerations: https://w3c.github.io/html-aria/
+Accessibility considerations: https://w3c.github.io/html-aria/#el-section
+
+ - Examples of sections would be chapters, the various tabbed pages in a tabbed dialog box,
+ or the numbered sections of a thesis. A web site's home page could be split into
+ sections for an introduction, news items, and contact information.
+ - Authors are encouraged to use the <article> element instead of the <section> element when
+ it would make sense to syndicate the contents of the element
+ - The <section> element is not a generic container element. When an element is needed only for styling purposes
+ or as a convenience for scripting, authors are encouraged to use the <div> element instead. A general rule is
+ that the section element is appropriate only if the element's contents would be listed explicitly in the document's outline
 
 Links:
  - https://html.spec.whatwg.org/multipage/sections.html#the-section-element
+ - https://html.spec.whatwg.org/multipage/sections.html#article-or-section
  -->
 <!doctype html>
 <html lang="en">
