@@ -1,0 +1,82 @@
+<!-- 
+The <footer> element represents a footer for its nearest ancestor sectioning content element, or for the <body> element if
+there is no such ancestor
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - flow content, but with no <header> or <footer> element descendants
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-footer
+
+ - A <footer> typically contains information about its section such as who wrote it, links to related documents,
+ copyright data, and the like
+ - When the <footer> element contains entire sections, they represent appendices, indices, long colophons, verbose license
+ agreements, and other such content
+ - Contact information for the author or editor of a section belongs in an <address> element, possibly itself inside a <footer>.
+ Bylines and other information that could be suitable for both a <header> or a <footer> can be placed in either (or neither).
+ The primary purpose of these elements is merely to help the author write self-explanatory markup that is easy to maintain and style;
+ they are not intended to impose specific structures on authors
+ - Footers don't necessarily have to appear at the end of a section, though they usually do
+ - When there is no ancestor sectioning content element, then it applies to the whole page
+ - The <footer> element is not itself sectioning content; it doesn't introduce a new section
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-footer-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>The Ramblings of a Scientist</title>
+  </head>
+  <body>
+    <h1>The Ramblings of a Scientist</h1>
+    <article>
+      <h1>Episode 15</h1>
+      <video src="/fm/015.ogv" controls preload>
+        <p><a href="/fm/015.ogv">Download video</a>.</p>
+      </video>
+      <footer>
+        <!-- footer for article -->
+        <p>
+          Published
+          <time datetime="2009-10-21T18:26-07:00">on 2009/10/21 at 6:26pm</time>
+        </p>
+      </footer>
+    </article>
+    <article>
+      <h1>My Favorite Trains</h1>
+      <p>I love my trains. My favorite train of all time is a Köf.</p>
+      <p>
+        It is fun to see them pull some coal cars because they look so dwarfed
+        in comparison.
+      </p>
+      <footer>
+        <!-- footer for article -->
+        <p>
+          Published
+          <time datetime="2009-09-15T14:54-07:00">on 2009/09/15 at 2:54pm</time>
+        </p>
+      </footer>
+    </article>
+    <footer>
+      <!-- site wide footer -->
+      <nav>
+        <p>
+          <a href="/credits.html">Credits</a> —
+          <a href="/tos.html">Terms of Service</a> —
+          <a href="/index.html">Blog Index</a>
+        </p>
+      </nav>
+      <p>Copyright © 2009 Gordon Freeman</p>
+    </footer>
+  </body>
+</html>
