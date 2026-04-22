@@ -1,0 +1,44 @@
+<!-- 
+The <address> element represents the contact information for its nearest <article> or <body> element ancestor.
+If that is the <body> element, then the contact information applies to the document as a whole
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - flow content, but with no heading content descendants, no sectioning content descendants, and no <header>, <footer>,
+ or <address> element descendants
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-address
+
+ - The <address> element must not be used to represent arbitrary addresses (e.g. postal addresses), unless those addresses are in
+ fact the relevant contact information. (The <p> element is the appropriate element for marking up postal addresses in general.)
+ - The <address> element must not contain information other than contact information
+ - Typically, the address element would be included along with other information in a footer element
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-address-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <footer>
+      <address>
+        For more details, contact
+        <a href="mailto:js@example.com">John Smith</a>.
+      </address>
+      <p><small>© copyright 2038 Example Corp.</small></p>
+    </footer>
+  </body>
+</html>
