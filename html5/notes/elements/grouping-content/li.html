@@ -1,0 +1,49 @@
+<!-- 
+The <li> element represents a list item.
+If its parent element is an <ol>, <ul>, or <menu> element, then the element is an item of the parent element's list,
+as defined for those elements. Otherwise, the list item has no defined list-related relationship to any other <li> element
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - Inside <ol> elements
+ - Inside <ul> elements
+ - Inside <menu> elements
+
+Content model:
+ - Flow content
+
+Attributes:
+ - global
+ - If the element is not a child of an ul or menu element: value - ordinal value of the list item
+The `value` attribute is used to determine the ordinal value of the list item, when the li's list owner is an <ol> element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-li
+
+ - While it is conforming to include heading elements (e.g. <h1>) inside <li> elements, it likely does not convey the semantics
+ that the author intended. A heading starts a new section, so a heading in a list implicitly splits the list into spanning multiple
+ sections
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <!-- 
+    The element's value IDL attribute does not directly correspond to its ordinal value; it simply reflects the content attribute.
+    For example, given this list:
+     -->
+    <ol>
+      <li>Item 1</li>
+      <li value="3">Item 3</li>
+      <li>Item 4</li>
+    </ol>
+    <!-- The ordinal values are 1, 3, and 4, whereas the value IDL attributes return 0, 3, 0 on getting -->
+  </body>
+</html>
