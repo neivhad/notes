@@ -1,0 +1,87 @@
+<!-- 
+The <blockquote> element represents a section that is quoted from another source
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Flow content
+
+Attributes:
+ - global
+ - cite: link to the source of the quotation or more information about the edit
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-blockquote
+
+ - content inside a blockquote must be quoted from another source, whose address, if it has one, may be cited in the cite attribute
+ - User agents may allow users to follow such citation links, but they are primarily intended for private use (e.g., by server-side
+ scripts collecting statistics about a site's use of quotations), not for readers
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <!-- This example shows how a forum post could use blockquote to show what post a user is replying to.
+     The article element is used for each post, to mark up the threading. -->
+    <article>
+      <h1>
+        <a href="https://bacon.example.com/?blog=109431">Bacon on a crowbar</a>
+      </h1>
+      <article>
+        <header><strong>t3yw</strong> 12 points 1 hour ago</header>
+        <p>I bet a narwhal would love that.</p>
+        <footer><a href="?pid=29578">permalink</a></footer>
+        <article>
+          <header><strong>greg</strong> 8 points 1 hour ago</header>
+          <blockquote><p>I bet a narwhal would love that.</p></blockquote>
+          <p>Dude narwhals don't eat bacon.</p>
+          <footer><a href="?pid=29579">permalink</a></footer>
+          <article>
+            <header><strong>t3yw</strong> 15 points 1 hour ago</header>
+            <blockquote>
+              <blockquote><p>I bet a narwhal would love that.</p></blockquote>
+              <p>Dude narwhals don't eat bacon.</p>
+            </blockquote>
+            <p>
+              Next thing you'll be saying they don't get capes and wizard hats
+              either!
+            </p>
+            <footer><a href="?pid=29580">permalink</a></footer>
+            <article>
+              <article>
+                <header><strong>boing</strong> -5 points 1 hour ago</header>
+                <p>narwhals are worse than ceiling cat</p>
+                <footer><a href="?pid=29581">permalink</a></footer>
+              </article>
+            </article>
+          </article>
+        </article>
+        <article>
+          <header><strong>fred</strong> 1 points 23 minutes ago</header>
+          <blockquote><p>I bet a narwhal would love that.</p></blockquote>
+          <p>I bet they'd love to peel a banana too.</p>
+          <footer><a href="?pid=29582">permalink</a></footer>
+        </article>
+      </article>
+    </article>
+    <!-- usage of a cite attribute -->
+    <p>His next piece was the aptly named <cite>Sonnet 130</cite>:</p>
+    <blockquote cite="https://quotes.example.org/s/sonnet130.html">
+      <p>
+        My mistress' eyes are nothing like the sun,<br />
+        Coral is far more red, than her lips red,<br />
+        ...
+      </p>
+    </blockquote>
+  </body>
+</html>
