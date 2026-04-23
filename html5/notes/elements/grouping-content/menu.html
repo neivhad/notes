@@ -1,0 +1,44 @@
+<!-- 
+The <menu> element represents a toolbar consisting of its contents, in the form of an unordered list of items
+(represented by <li> elements), each of which represents a command that the user can perform or activate
+
+Categories:
+ - Flow content
+ - Palpable content: if the element's children include at least one <li> element
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Zero or more <li> and script-supporting elements (<script>, <template>)
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-menu
+
+ - The <menu> element is simply a semantic alternative to <ul> to express an unordered list of commands (a "toolbar")
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-menu-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <menu>
+      <li>
+        <button onclick="copy()"><img src="copy.svg" alt="Copy" /></button>
+      </li>
+      <li>
+        <button onclick="cut()"><img src="cut.svg" alt="Cut" /></button>
+      </li>
+      <li>
+        <button onclick="paste()"><img src="paste.svg" alt="Paste" /></button>
+      </li>
+    </menu>
+  </body>
+</html>
