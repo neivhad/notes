@@ -1,0 +1,84 @@
+<!-- 
+The <hr> element represents a paragraph-level thematic break
+Alternatively, it represents a separator between a set of options of a <select> element
+
+Categories:
+ - Flow content
+ - <select> element inner content elements
+
+Contexts in which this element can be used:
+ - where flow content is expected
+ - as a child of a <select> element
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-hr
+
+ - a paragraph-level thematic break, e.g., a scene change in a story, or a transition to another topic within a section
+ of a reference book
+ - There is no need for an <hr> element between the sections themselves, since the <section> elements and the <h1> elements imply
+ thematic changes themselves
+ - The <hr> element does not affect the document's outline
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <section>
+      <h1>Communication</h1>
+      <p>
+        There are various methods of communication. This section covers a few of
+        the important ones used by the project.
+      </p>
+      <hr />
+      <p>
+        Communication stones seem to come in pairs and have mysterious
+        properties:
+      </p>
+      <ul>
+        <li>
+          They can transfer thoughts in two directions once activated if used
+          alone.
+        </li>
+        <li>
+          If used with another device, they can transfer one's consciousness to
+          another body.
+        </li>
+        <li>
+          If both stones are used with another device, the consciousnesses
+          switch bodies.
+        </li>
+      </ul>
+      <hr />
+      <p>
+        Radios use the electromagnetic spectrum in the meter range and longer.
+      </p>
+      <hr />
+      <p>
+        Signal flares use the electromagnetic spectrum in the nanometer range.
+      </p>
+    </section>
+    <section>
+      <h1>Food</h1>
+      <p>All food at the project is rationed:</p>
+      <dl>
+        <dt>Potatoes</dt>
+        <dd>Two per day</dd>
+        <dt>Soup</dt>
+        <dd>One bowl per day</dd>
+      </dl>
+      <hr />
+      <p>Cooking is done by the chefs on a set rotation.</p>
+    </section>
+  </body>
+</html>
