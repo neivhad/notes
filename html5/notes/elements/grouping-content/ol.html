@@ -1,0 +1,49 @@
+<!-- 
+The <ol> element represents a list of items, where the items have been intentionally ordered, such that changing the order would
+change the meaning of the document
+
+Categories:
+ - Flow content
+ - Palpable content: if the element's children include at least one <li> element
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Zero or more <li> and script-supporting elements (<script>, <template>)
+
+Attributes:
+ - global
+ - reversed: Number the list backwards
+ - start: Starting value of the list
+ - type: Kind of list marker
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-ol
+
+ - Due to [ReflectDefault] the start IDL attribute does not necessarily match the list's starting value, in cases where the start
+ content attribute is omitted and the reversed content attribute is specified
+ <ol id="mylist" reversed="">...</ol> # Starting value is 3 because of the 3 <li> elements
+ document.getElementById("mylist").start === 1
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-ol-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      I have lived in the following countries (given in the order of when I
+      first lived there):
+    </p>
+    <ol>
+      <li>Switzerland</li>
+      <li>United Kingdom</li>
+      <li>United States</li>
+      <li>Norway</li>
+    </ol>
+  </body>
+</html>
