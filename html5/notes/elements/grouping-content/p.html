@@ -1,0 +1,81 @@
+<!-- 
+The <p> element represents a paragraph: https://html.spec.whatwg.org/multipage/dom.html#paragraphs
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+ - as a child of an <hgroup> element
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-p
+
+ - The <p> element should not be used when a more specific element is more appropriate
+ - List elements (in particular, <ol> and <ul> elements) cannot be children of <p> elements (check example below)
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <section>
+      <h2>Example of paragraphs</h2>
+      This is the <em>first</em> paragraph in this example.
+      <p>This is the second.</p>
+      <!-- This is not a paragraph. -->
+    </section>
+    <!-- can also be used for more general thematic grouping (address, part of a form, byline, stanza in a poem, ...) -->
+    <address>
+      123 Main Street<br />
+      Springfield, IL 62704
+    </address>
+    <!-- 
+    The <ins> wraps around both paragraphs. To find the paragraph boundaries, you ignore the <ins> and just look at the two <p>
+    elements — those are your two paragraphs
+    Generally, having elements straddle paragraph boundaries is best avoided. Maintaining such markup can be difficult.
+     -->
+    <section>
+      <ins>
+        <p>First paragraph.</p>
+        <p>Second paragraph.</p>
+      </ins>
+    </section>
+    <!-- 
+    List elements (in particular, ol and ul elements) cannot be children of p elements
+    there are actually five paragraphs as defined by this specification: one before the list, one for each bullet,
+    and one after the list
+     -->
+    <p>For instance, this fantastic sentence has bullets relating to</p>
+    <ul>
+      <li>wizards,</li>
+      <li>faster-than-light travel, and</li>
+      <li>telepathy,</li>
+    </ul>
+    <p>and is further discussed below.</p>
+  </body>
+  <!-- 
+  Authors wishing to conveniently style such "logical" paragraphs consisting of multiple "structural" paragraphs can use the
+  div element instead of the p element
+   -->
+  <div>
+    For instance, this fantastic sentence has bullets relating to
+    <ul>
+      <li>wizards,</li>
+      <li>faster-than-light travel, and</li>
+      <li>telepathy,</li>
+    </ul>
+    and is further discussed below.
+  </div>
+</html>
