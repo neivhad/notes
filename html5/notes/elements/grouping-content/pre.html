@@ -1,0 +1,72 @@
+<!-- 
+The <pre> element represents a block of preformatted text, in which structure is represented by typographic conventions
+rather than by elements
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-pre
+
+ - in the HTML syntax, a leading newline character immediately following the <pre> element start tag is stripped
+ - cases where the <pre> element could be used:
+  - Including an email, with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet, and so on
+  - Including fragments of computer code, with structure indicated according to the conventions of that language
+  - Displaying ASCII art
+ - Authors are encouraged to consider how preformatted text will be experienced when the formatting is lost, as will be the case
+ for users of speech synthesizers, braille displays, and the like. For cases like ASCII art, it is likely that an alternative
+ presentation, such as a textual description, would be more universally accessible to the readers of the document
+ - To represent a block of computer code, the pre element can be used with a code element; to represent a block of computer output
+ the pre element can be used with a samp element. Similarly, the kbd element can be used within a pre element to indicate text that
+ the user is to enter
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-pre-element
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>This is the <code>Panel</code> constructor:</p>
+<pre><code>function Panel(element, canClose, closeHandler) {
+  this.element = element;
+  this.canClose = canClose;
+  this.closeHandler = function () { if (closeHandler) closeHandler() };
+}</code></pre>
+<pre><samp>You are in an open field west of a big white house with a boarded
+front door.
+There is a small mailbox here.
+
+></samp> <kbd>open mailbox</kbd>
+
+<samp>Opening the mailbox reveals:
+A leaflet.
+
+></samp></pre>
+<pre>                maxling
+
+it is with a          heart
+               heavy
+
+that i admit loss of a feline
+        so           loved
+
+a friend lost to the
+        unknown
+                                (night)
+
+~cdr 11dec07</pre>
+  </body>
+</html>
