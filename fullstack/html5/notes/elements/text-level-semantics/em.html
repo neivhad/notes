@@ -1,0 +1,38 @@
+<!-- 
+The <em> element represents stress emphasis of its contents
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-em
+
+ - The level of stress that a particular piece of content has is given by its number of ancestor em elements
+ - The <em> element isn't a generic "italics" element. Sometimes, text is intended to stand out from the rest of the paragraph,
+ as if it was in a different mood or voice. For this, the <i> element is more appropriate
+- The <em> element isn't intended to convey importance; for that purpose, the <strong> element is more appropriate
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/em
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p><em>Cats</em> are cute animals.</p>
+  </body>
+</html>
