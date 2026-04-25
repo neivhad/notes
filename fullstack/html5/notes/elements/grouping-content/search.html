@@ -1,0 +1,48 @@
+<!-- 
+The <search> element represents a part of a document or application that contains a set of form controls or other content related
+ to performing a search or filtering operation. This could be a search of the web site or application; a way of searching or
+ filtering search results on the current web page; or a global or Internet-wide search function
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - Where flow content is expected
+
+Content model:
+ - Flow content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-search
+
+ - It's not appropriate to use the <search> element just for presenting search results, though suggestions and links as part
+ of "quick search" results can be included as part of a search feature. Rather, a returned web page of search results would
+ instead be expected to be presented as part of the main content of that web page
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/search
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">My fancy blog</a></h1>
+      ...
+      <search>
+        <form action="search.php">
+          <label for="query">Find an article</label>
+          <input id="query" name="q" type="search" />
+          <button type="submit">Go!</button>
+        </form>
+      </search>
+    </header>
+  </body>
+</html>
