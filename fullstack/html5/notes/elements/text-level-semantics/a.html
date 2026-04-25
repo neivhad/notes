@@ -1,0 +1,57 @@
+<!-- 
+If the <a> element has an `href` attribute, then it represents a hyperlink (a hypertext anchor) labeled by its contents
+If the <a> element has no `href` attribute, then the element represents a placeholder for where a link might otherwise have been
+placed, if it had been relevant, consisting of just the element's contents
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+ - If the element has an `href` attribute: Interactive content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Transparent, but there must be no interactive content descendant, <a> element descendant, or descendant with the `tabindex`
+ attribute specified
+
+Attributes:
+ - global
+ - href: Address of the hyperlink
+ - target: Navigable for hyperlink navigation
+ - download: Whether to download the resource instead of navigating to it, and its filename if so
+ - ping: URLs to ping
+ - rel: Relationship between the location in the document containing the hyperlink and the destination resource
+ - hreflang: Language of the linked resource
+ - type: Hint for the type of the referenced resource
+ - referrerpolicy: Referrer policy for fetches initiated by the element
+The `target`, `download`, `ping`, `rel`, `hreflang`, `type`, and `referrerpolicy` attributes must be omitted if the
+`href` attribute is not present
+If the `itemprop` attribute is specified on an <a> element, then the `href` attribute must also be specified
+
+Accessibility considerations:
+ - https://w3c.github.io/html-aria/#el-a
+ - https://w3c.github.io/html-aria/#el-a-no-href
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a>Examples</a></li>
+        <li><a href="/legal">Legal</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
