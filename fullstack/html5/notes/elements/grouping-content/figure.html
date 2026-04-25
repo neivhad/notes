@@ -1,0 +1,70 @@
+<!-- 
+The <figure> element represents some flow content, optionally with a caption, that is self-contained (like a complete sentence)
+ and is typically referenced as a single unit from the main flow of the document. "Self-contained" in this context does not necessarily
+ mean independent. For example, each sentence in a paragraph is self-contained; an image that is part of a sentence would be
+ inappropriate for figure, but an entire sentence made of images would be fitting. The element can thus be used to annotate
+ illustrations, diagrams, photos, code listings, etc
+
+Categories:
+ - Flow content.
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Either: one <figcaption> element followed by flow content.
+ Or: flow content followed by one <figcaption> element.
+ Or: flow content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-figure
+
+ - When a <figure> is referred to from the main content of the document by identifying it by its caption (e.g., by figure number),
+ it enables such content to be easily moved away from that primary content, e.g., to the side of the page, to dedicated pages,
+ or to an appendix, without affecting the flow of the document. If a <figure> element is referenced by its relative position,
+ e.g., "in the photograph above" or "as the next figure shows", then moving the figure would disrupt the page's meaning. Authors
+ are encouraged to consider using labels to refer to figures, rather than using such relative references, so that the page can
+ easily be restyled without affecting the page's meaning
+ - The first <figcaption> element child of the element, if any, represents the caption of the <figure> element's contents.
+ If there is no child <figcaption> element, then there is no caption
+
+Links:
+ - https://html.spec.whatwg.org/multipage/grouping-content.html#the-figure-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/figure
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <figure>
+      <img
+        src="bubbles-work.jpeg"
+        alt="Bubbles, sitting in his office chair, works on his
+           latest project intently."
+      />
+      <figcaption>Bubbles at work</figcaption>
+    </figure>
+    <!--  -->
+    <p>
+      In <a href="#l4">listing 4</a> we see the primary core interface API
+      declaration.
+    </p>
+    <figure id="l4">
+      <figcaption>
+        Listing 4. The primary core interface API declaration.
+      </figcaption>
+      <pre><code>interface PrimaryCore {
+ boolean verifyDataLine();
+ undefined sendData(sequence&lt;byte> data);
+ undefined initSelfDestruct();
+}</code></pre>
+    </figure>
+    <p>The API is designed to use UTF-8.</p>
+  </body>
+</html>
