@@ -1,0 +1,49 @@
+<!-- 
+The <strong> element represents strong importance, seriousness, or urgency for its contents
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-strong
+
+ - Importance: the <strong> element can be used in a heading, caption, or paragraph to distinguish the part that really matters from
+ other parts that might be more detailed, more jovial, or merely boilerplate. (This is distinct from marking up subheadings, for
+ which the <hgroup> element is appropriate.)
+ - Seriousness: the strong element can be used to mark up a warning or caution notice
+ - Urgency: the strong element can be used to denote contents that the user needs to see sooner than other parts of the document
+ - The relative level of importance of a piece of content is given by its number of ancestor strong elements; each strong element
+ increases the importance of its contents
+ - The relative level of importance of a piece of content is given by its number of ancestor strong elements; each strong element
+ increases the importance of its contents
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/strong
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      <strong>Importance</strong>: the strong element can be used in a heading,
+      caption, or paragraph to distinguish the part that really matters from
+      other parts that might be more detailed, more jovial, or merely
+      boilerplate. (This is distinct from marking up subheadings, for which the
+      hgroup element is appropriate.)
+    </p>
+  </body>
+</html>
