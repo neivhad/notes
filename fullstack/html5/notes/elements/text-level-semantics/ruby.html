@@ -1,0 +1,54 @@
+<!-- 
+The <ruby>, <rt>, <rp> elements allows one or more spans of phrasing content to be marked with ruby annotations
+Ruby annotations are short runs of text presented alongside base text, primarily used in East Asian typography as a guide for
+pronunciation or to include other annotations. In Japanese, this form of typography is also known as furigana
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - consists of one or more of the following sequences
+  - One or the other of the following:
+   - Phrasing content, but with no <ruby> elements and with no <ruby> element descendants
+   - A single <ruby> element that itself has no <ruby> element descendants
+  - One or the other of the following:
+   - One or more <rt> elements
+   - An <rp> element followed by one or more <rt> elements, each of which is itself followed by an <rp> element
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-ruby
+
+ - <rt>: marks annotation
+ - <rp>: can be used to provide parentheses or other content around a <ruby> text component of a ruby annotation, to be shown by user
+ agents that don't support ruby annotations
+ - Within a <ruby> element that does not have a <ruby> element ancestor, content is segmented and segments are placed into three
+ categories: base text segments, annotation segments, and ignored segments. Ignored segments do not form part of the document's semantics
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/ruby
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <ruby>BASE<rt>annotation</rt></ruby>
+    <ruby> ♥ <rt> Heart </rt><rt lang="fr"> Cœur </rt></ruby>
+    <ruby>
+      明日
+      <rp>(</rp>
+      <rt>Ashita</rt>
+      <rp>)</rp>
+    </ruby>
+  </body>
+</html>
