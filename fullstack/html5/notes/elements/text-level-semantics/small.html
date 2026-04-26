@@ -1,0 +1,47 @@
+<!-- 
+The <small> element represents side comments such as small print
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-small
+
+ - Small print typically features disclaimers, caveats, legal restrictions, or copyrights.
+ Small print is also sometimes used for attribution, or for satisfying licensing requirements
+ - The <small> element does not "de-emphasize" or lower the importance of text emphasized by the <em> element or marked as important
+ with the <strong> element. To mark text as not emphasized or important, simply do not mark it up with the em or strong elements
+ respectively
+ - The <small> element should not be used for extended spans of text, such as multiple paragraphs, lists, or sections of text. It is
+ only intended for short runs of text
+ - The <small> element must not be used for subheadings; for that purpose, use the <hgroup> element
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-small-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/small
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <dl>
+      <dt>Single room</dt>
+      <dd>199 € <small>breakfast included, VAT not included</small></dd>
+      <dt>Double room</dt>
+      <dd>239 € <small>breakfast included, VAT not included</small></dd>
+    </dl>
+  </body>
+</html>
