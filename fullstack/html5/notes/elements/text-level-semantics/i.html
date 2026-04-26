@@ -1,0 +1,44 @@
+<!-- 
+The <i> element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner
+indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic phrase from another language,
+transliteration, a thought, or a ship name in Western texts
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+Terms in languages different from the main text should be annotated with `lang` attributes
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-i
+
+ - The <s> element is not appropriate when indicating document edits; to mark a span of text as having been removed from a document,
+ use the <del> element
+ - Authors can use the `class` attribute on the <i> element to identify why the element is being used
+ - Authors are encouraged to consider whether other elements might be more applicable than the <i> element, for instance the <em>
+ element for marking up stress emphasis, or the <dfn> element to mark up the defining instance of a term
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/i
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>The <i class="taxonomy">Felis silvestris catus</i> is cute.</p>
+    <p>The term <i>prose content</i> is defined above.</p>
+    <p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
+  </body>
+</html>
