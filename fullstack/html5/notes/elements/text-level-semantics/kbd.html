@@ -1,0 +1,49 @@
+<!-- 
+The <kbd> element represents user input (typically keyboard input, although it may also be used to represent other input, such as
+voice commands)
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-kbd
+
+ - When the <kbd> element is nested inside a <samp> element, it represents the input as it was echoed by the system
+ - When the <kbd> element contains a <samp> element, it represents input based on system output, for example invoking a menu item
+ - When the <kbd> element is nested inside another <kbd> element, it represents an actual key or other single unit of input as
+ appropriate for the input mechanism
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-kbd-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      To make George eat an apple, press
+      <kbd><kbd>Shift</kbd> + <kbd>F3</kbd></kbd>
+    </p>
+    <p>
+      To make George eat an apple, select
+      <kbd
+        ><kbd><samp>File</samp></kbd
+        >|<kbd><samp>Eat Apple...</samp></kbd></kbd
+      >
+    </p>
+  </body>
+</html>
