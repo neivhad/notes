@@ -1,0 +1,51 @@
+<!-- 
+The <cite> element represents the title of a work (e.g. a book, a paper, an essay, a poem, a score, a song, a script, a film, a TV show,
+a game, a sculpture, a painting, a theatre production, a play, an opera, a musical, an exhibition, a legal case report,a computer
+program, etc.). This can be a work that is being quoted or referenced in detail (i.e., a citation), or it can just be a work that is
+mentioned in passing
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-cite
+
+ - A person's name is not the title of a work — even if people call that person a piece of work — and the element must therefore not
+ be used to mark up people's names. (In some cases, the <b> element might be appropriate for names; e.g. in a gossip article where the
+names of famous people are keywords rendered with a different style to draw attention to them. In other cases, if an element is really
+needed, the span element can be used.)
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-cite-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      My favorite book is <cite>The Reality Dysfunction</cite> by Peter F.
+      Hamilton. My favorite comic is <cite>Pearls Before Swine</cite> by Stephan
+      Pastis. My favorite track is <cite>Jive Samba</cite> by the Cannonball
+      Adderley Sextet.
+    </p>
+    <p>
+      According to the Wikipedia article <cite>HTML</cite>, as it stood in
+      mid-February 2008, leaving attribute values unquoted is unsafe. This is
+      obviously an over-simplification.
+    </p>
+  </body>
+</html>
