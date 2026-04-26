@@ -1,0 +1,74 @@
+<!-- 
+The <data> element represents its contents, along with a machine-readable form of those contents in the `value` attribute
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+ - value: must be a representation of the element's contents in a machine-readable format. Required
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-data
+
+ - When the `value` is date- or time-related, the more specific <time> element can be used instead
+ - The element can be used for several purposes:
+  - When combined with microformats or the microdata attributes defined in this specification, the element serves to provide both
+  a machine-readable value for the purposes of data processors, and a human-readable value for the purposes of rendering in a web
+  browser. In this case, the format to be used in the value attribute is determined by the microformats or microdata vocabulary
+  in use
+  - The element can be used in conjunction with scripts in the page, for when a script has a literal value to store alongside
+  a human-readable value. In such cases, the format to be used depends only on the needs of the script. (The `data-*` attributes can
+  also be useful in such situations.)
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-data-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/data
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <script src="sortable.js"></script>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>Game</th>
+          <th>Corporations</th>
+          <th>Map Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1830</td>
+          <td><data value="8">Eight</data></td>
+          <td>
+            <data value="93">19+74 hexes (93 total)</data>
+            <tr>
+              <td>1856</td>
+              <td><data value="11">Eleven</data></td>
+              <td>
+                <data value="99">12+87 hexes (99 total)</data>
+                <tr>
+                  <td>1870</td>
+                  <td><data value="10">Ten</data></td>
+                  <td><data value="149">4+145 hexes (149 total)</data></td>
+                </tr>
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
