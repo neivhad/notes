@@ -1,0 +1,43 @@
+<!-- 
+The <code> element represents a fragment of computer code. This could be an XML element name, a filename, a computer program, or any
+other string that a computer would recognize
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-code
+
+ - There is no formal way to indicate the language of computer code being marked up. Authors who wish to mark code elements with the
+language used, e.g. so that syntax highlighting scripts can use the right rules, can use the `class` attribute, e.g. by adding a class
+prefixed with "language-" to the element
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/code
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <pre><code class="language-pascal">
+var i: Integer;
+begin
+   i := 1;
+end.
+</code></pre>
+  </body>
+</html>
