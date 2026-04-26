@@ -1,0 +1,42 @@
+<!-- 
+The <bdi> element represents a span of text that is to be isolated from its surroundings for the purposes of bidirectional text
+formatting
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+The `dir` attribute has special semantics on this element
+The `dir` attribute defaults to auto on this element (it never inherits from the parent element like with other elements)
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-bdi
+
+ - This element is especially useful when embedding user-generated content with an unknown directionality
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdi-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdi
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <ul>
+      <li>User <bdi>jcranmer</bdi>: 12 posts.</li>
+      <li>User <bdi>hober</bdi>: 5 posts.</li>
+      <li>User <bdi>إيان</bdi>: 3 posts.</li>
+    </ul>
+  </body>
+</html>
