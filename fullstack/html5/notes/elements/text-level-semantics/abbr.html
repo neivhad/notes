@@ -1,0 +1,49 @@
+<!-- 
+The <abbr> element represents an abbreviation or acronym, optionally with its expansion
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+ The `title` attribute has special semantics on this element: Full term or expansion of abbreviation
+ The attribute, if specified, must contain an expansion of the abbreviation, and nothing else
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-abbr
+
+ - Abbreviations do not have to be marked up using this element. It is expected to be useful in the following cases:
+  - Abbreviations for which the author wants to give expansions, where using the <abbr> element with a `title` attribute is an
+  alternative to including the expansion inline (e.g. in parentheses)
+  - Abbreviations that are likely to be unfamiliar to the document's readers, for which authors are encouraged to either mark up the
+  abbreviation using an <abbr> element with a `title` attribute or include the expansion inline in the text the first time the
+  abbreviation is used
+  - Abbreviations whose presence needs to be semantically annotated, e.g. so that they can be identified from a style sheet and given
+  specific styles, for which the <abbr> element can be used without a `title` attribute
+ - Providing an expansion in a `title` attribute once will not necessarily cause other <abbr> elements in the same document with the
+ same contents but without a `title` attribute to behave as if they had the same expansion. Every <abbr> element is independent
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-abbr-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/abbr
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      Two <abbr title="Working Group">WG</abbr>s worked on this specification:
+      the <abbr>WHATWG</abbr> and the <abbr>HTMLWG</abbr>.
+    </p>
+  </body>
+</html>
