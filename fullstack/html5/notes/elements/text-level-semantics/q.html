@@ -1,0 +1,52 @@
+<!-- 
+The <q> element represents some phrasing content quoted from another source
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+ - cite: Link to the source of the quotation or more information about the edit
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-q
+
+ - Quotation punctuation (such as quotation marks) that is quoting the contents of the element must not appear immediately before,
+ after, or inside <q> elements; they will be inserted into the rendering by the user agent
+ - Content inside a <q> element must be quoted from another source, whose address, if it has one, may be cited in the `cite` attribute.
+ The source may be fictional, as when quoting characters in a novel or screenplay
+ - The use of <q> elements to mark up quotations is entirely optional; using explicit quotation punctuation without <q> elements is
+ just as correct
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/q
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      The man said <q>Things that are impossible just take longer</q>. I
+      disagreed with him.
+    </p>
+    <p>
+      The W3C page <cite>About W3C</cite> says the W3C's mission is
+      <q cite="https://www.w3.org/Consortium/"
+        >To lead the World Wide Web to its full potential by developing
+        protocols and guidelines that ensure long-term growth for the Web</q
+      >. I disagree with this mission.
+    </p>
+    <p>His best argument was ❝I disagree❞, which I thought was laughable.</p>
+  </body>
+</html>
