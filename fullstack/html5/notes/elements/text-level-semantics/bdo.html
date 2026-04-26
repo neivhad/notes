@@ -1,0 +1,42 @@
+<!-- 
+The <bdo> element represents explicit text directionality formatting control for its children.
+It allows authors to override the Unicode bidirectional algorithm by explicitly specifying a direction override
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+The `dir` attribute has special semantics on this element
+Authors must specify the `dir` attribute on this element, with the value `ltr` to specify a left-to-right override and with the value
+`rtl` to specify a right-to-left override. The `auto` value must not be specified
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-bdo
+
+ - This element is especially useful when embedding user-generated content with an unknown directionality
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-bdo-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/bdo
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      In the computer's memory, this is stored as
+      <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+    </p>
+  </body>
+</html>
