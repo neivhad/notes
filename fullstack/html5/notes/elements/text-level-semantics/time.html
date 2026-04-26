@@ -1,0 +1,44 @@
+<!-- 
+The <time> element represents its contents, along with a machine-readable form of those contents in the `datetime` attribute.
+The kind of content is limited to various kinds of dates, times, time-zone offsets, and durations, as described below
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - If the element has a `datetime` attribute: Phrasing content.
+ Otherwise: Text, but must match requirements:
+  - must not have any element descendants
+  - datetime value: https://html.spec.whatwg.org/multipage/text-level-semantics.html#datetime-value
+
+Attributes:
+ - global
+ - datetime: must be a representation of the element's contents in a machine-readable format
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-time
+
+ - The <s> element is not appropriate when indicating document edits; to mark a span of text as having been removed from a document,
+ use the <del> element
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      We stopped talking at
+      <time datetime="2006-09-24T05:00-07:00">5am the next morning</time>.
+    </p>
+  </body>
+</html>
