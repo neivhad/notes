@@ -1,0 +1,50 @@
+<!-- 
+The <sup> element represents a superscript and the <sub> element represents a subscript.
+Authors should use these elements only if the absence of those elements would change the meaning of the content
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations:
+ - https://w3c.github.io/html-aria/#el-sub
+ - https://w3c.github.io/html-aria/#el-sup
+
+ - These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation
+ for presentation's sake
+ - The <sub> element can be used inside a <var> element, for variables that have subscripts
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-sub-and-sup-elements
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sub
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/sup
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      Their names are
+      <span lang="fr"
+        ><abbr>M<sup>lle</sup></abbr> Gwendoline</span
+      >
+      and
+      <span lang="fr"
+        ><abbr>M<sup>me</sup></abbr> Denise</span
+      >.
+    </p>
+  </body>
+</html>
