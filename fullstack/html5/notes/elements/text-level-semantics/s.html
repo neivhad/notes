@@ -1,0 +1,38 @@
+<!-- 
+The <s> element represents contents that are no longer accurate or no longer relevant
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-s
+
+ - The <s> element is not appropriate when indicating document edits; to mark a span of text as having been removed from a document,
+ use the <del> element
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-s-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/s
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>Buy our Iced Tea and Lemonade!</p>
+    <p><s>Recommended retail price: $3.99 per bottle</s></p>
+    <p><strong>Now selling for just $2.99 a bottle!</strong></p>
+  </body>
+</html>
