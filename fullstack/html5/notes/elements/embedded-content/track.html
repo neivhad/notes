@@ -1,0 +1,59 @@
+<!-- 
+The <track> element allows authors to specify explicit external timed text tracks for media elements. It does not represent anything
+on its own
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - as a child of a media element, before any flow content
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - kind: The type of text track
+ - src: Address of the resource
+ - srclang: Language of the text track
+ - label: User-visible label
+ - default: Enable the track if no other text track is more suitable
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-track
+
+Links:
+ - https://html.spec.whatwg.org/multipage/embedded-content.html#the-track-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/track
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <video src="brave.webm">
+      <track kind="subtitles" src="brave.en.vtt" srclang="en" label="English" />
+      <track
+        kind="captions"
+        src="brave.en.hoh.vtt"
+        srclang="en"
+        label="English for the Hard of Hearing"
+      />
+      <track
+        kind="subtitles"
+        src="brave.fr.vtt"
+        srclang="fr"
+        lang="fr"
+        label="Français"
+      />
+      <track
+        kind="subtitles"
+        src="brave.de.vtt"
+        srclang="de"
+        lang="de"
+        label="Deutsch"
+      />
+    </video>
+  </body>
+</html>
