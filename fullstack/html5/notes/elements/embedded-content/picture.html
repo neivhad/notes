@@ -1,0 +1,43 @@
+<!-- 
+The <picture> element is a container which provides multiple sources to its contained <img> element to allow authors to declaratively
+control or give hints to the user agent about which image resource to use, based on the screen pixel density, viewport size, image
+format, and other factors. It represents its children
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Embedded content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where embedded content is expected
+
+Content model:
+ - Zero or more <source> elements, followed by one <img> element,
+ optionally intermixed with script-supporting elements (<script>, <template>)
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-picture
+
+Links:
+ - https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <picture>
+      <source
+        srcset="/shared-assets/images/examples/surfer.jpg"
+        media="(orientation: portrait)"
+      />
+      <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+    </picture>
+  </body>
+</html>
