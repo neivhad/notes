@@ -1,0 +1,52 @@
+<!-- 
+The <iframe> element represents its content navigable
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Embedded content
+ - Interactive content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where embedded content is expected
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - src: Address of the resource
+ - srcdoc: A document to render in the <iframe>
+ - name: Name of content navigable
+ - sandbox: Security rules for nested content
+ - allow: Permissions policy to be applied to the <iframe>'s contents
+ - allowfullscreen: Whether to allow the <iframe>'s contents to use `requestFullscreen()`
+ - width: Horizontal dimension
+ - height: Vertical dimension
+ - referrerpolicy: Referrer policy for fetches initiated by the element
+ - loading: Used when determining loading deferral
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-iframe
+
+Links:
+ - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <iframe
+      id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="300"
+      height="200"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&amp;layer=mapnik"
+    >
+    </iframe>
+  </body>
+</html>
