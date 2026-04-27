@@ -1,0 +1,39 @@
+<!-- 
+The <wbr> element represents a line break opportunity
+
+Categories:
+ - Flow content
+ - Phrasing content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-wbr
+
+ - Any content inside wbr elements must not be considered part of the surrounding text:
+ var wbr = document.createElement("wbr");
+ wbr.textContent = "This is wrong";
+ document.body.appendChild(wbr);
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-wbr-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/wbr
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      So then she pointed at the tiger and screamed "there<wbr />is<wbr />no<wbr />way<wbr />you<wbr />are<wbr />ever<wbr />going<wbr />to<wbr />catch<wbr />me"!
+    </p>
+  </body>
+</html>
