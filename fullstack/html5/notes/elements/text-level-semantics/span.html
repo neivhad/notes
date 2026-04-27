@@ -1,0 +1,35 @@
+<!-- 
+The <span> element doesn't mean anything on its own, but can be useful when used together with the global attributes,
+e.g. `class`, `lang`, or `dir`. It represents its children
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - If the element is a descendant of an <option> element: Zero or more <option> element inner content elements, except <div> elements.
+ Otherwise: Phrasing content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-span
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-span-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/span
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>Buy our Iced Tea and <span>Lemonade</span>!</p>
+  </body>
+</html>
