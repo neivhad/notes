@@ -1,0 +1,47 @@
+<!-- 
+An <audio> element represents a sound or audio stream
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Embedded content
+ - If the element has a `controls` attribute: Interactive content
+ - If the element has a `controls` attribute: Palpable content
+
+Contexts in which this element can be used:
+ - where embedded content is expected
+
+Content model:
+ - If the element has a `src` attribute: zero or more <track> elements, then transparent, but with no media element descendants
+ - If the element does not have a `src` attribute: zero or more <source> elements, then zero or more <track> elements, then
+ transparent, but with no media element descendants
+
+Attributes:
+ - global
+ - src: Address of the resource
+ - crossorigin: How the element handles crossorigin requests
+ - preload: Hints how much buffering the media resource will likely need
+ - autoplay: Hint that the media resource can be started automatically when the page is loaded
+ - loop: Whether to loop the media resource
+ - muted: Whether to mute the media resource by default
+ - controls: Show user agent controls
+ - loading: Used when determining loading deferral
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-audio
+
+ - audio elements without a `controls` attribute will not be displayed by the user agent, preventing them from lazy loading
+
+Links:
+ - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-audio-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/audio
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <audio src="1.mp3" type="audio/mpeg" controls></audio>
+  </body>
+</html>
