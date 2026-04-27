@@ -1,0 +1,63 @@
+<!-- 
+An <img> element represents an image
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Embedded content
+ - Form-associated element
+ - If the element has a `usemap` or `controls` attribute: Interactive content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where embedded content is expected
+ - as a child of a <picture> element, after all <source> elements
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - alt — Replacement text for use when images are not available
+ - src — Address of the resource
+ - srcset — Images to use in different situations, e.g., high-resolution displays, small monitors, etc.
+ - sizes — Image sizes for different page layouts
+ - crossorigin — How the element handles crossorigin requests
+ - usemap — Name of image map to use
+ - ismap — Whether the image is a server-side image map
+ - controls — Show user agent controls
+ - width — Horizontal dimension
+ - height — Vertical dimension
+ - referrerpolicy — Referrer policy for fetches initiated by the element
+ - decoding — Decoding hint to use when processing this image for presentation
+ - loading — Used when determining loading deferral
+ - fetchpriority — Sets the priority for fetches initiated by the element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-img
+
+ - Developers are encouraged to specify a preferred aspect ratio via width and height attributes on lazy loaded images, even if
+ CSS sets the image's `width` and `height` properties, to prevent the page layout from shifting around after the image loads
+ - The <img> element must not be used as a layout tool. In particular, img elements should not be used to display transparent images,
+ as such images rarely convey meaning and rarely add anything useful to the document
+
+Links:
+ - https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <article>
+      <h1>Fluffy and the Yarn</h1>
+      <p>
+        Fluffy was a cat who liked to play with yarn. She also liked to jump.
+      </p>
+      <aside><img src="fluffy.jpg" alt="" title="Fluffy" /></aside>
+      <p>She would play in the morning, she would play in the evening.</p>
+    </article>
+  </body>
+</html>
