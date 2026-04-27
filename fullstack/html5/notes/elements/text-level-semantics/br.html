@@ -1,0 +1,44 @@
+<!-- 
+The <br> element represents a line break
+
+Categories:
+ - Flow content
+ - Phrasing content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-br
+
+ - While line breaks are usually represented in visual media by physically moving subsequent text to a new line, a style sheet or
+ user agent would be equally justified in causing line breaks to be rendered in a different manner, for instance as green dots,
+ or as extra spacing
+ - <br> elements must be used only for line breaks that are actually part of the content, as in poems or addresses
+ - <br> elements must not be used for separating thematic groups in a paragraph
+ - If a paragraph consists of nothing but a single <br> element, it represents a placeholder blank line (e.g. as in a template).
+ Such blank lines must not be used for presentation purposes
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-br-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/br
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <p>
+      P. Sherman<br />
+      42 Wallaby Way<br />
+      Sydney
+    </p>
+  </body>
+</html>
