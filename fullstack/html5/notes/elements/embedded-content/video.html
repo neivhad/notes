@@ -1,0 +1,49 @@
+<!-- 
+A <video> element is used for playing videos or movies, and audio files with captions
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Embedded content
+ - If the element has a `controls` attribute: Interactive content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where embedded content is expected
+
+Content model:
+ - If the element has a `src` attribute: zero or more <track> elements, then transparent, but with no media element descendants
+ - If the element does not have a `src` attribute: zero or more <source> elements, then zero or more <track> elements, then
+ transparent, but with no media element descendants
+
+Attributes:
+ - global
+ - src: Address of the resource
+ - crossorigin: How the element handles crossorigin requests
+ - poster: Poster frame to show prior to video playback
+ - preload: Hints how much buffering the media resource will likely need
+ - autoplay: Hint that the media resource can be started automatically when the page is loaded
+ - playsinline: Encourage the user agent to display video content within the element's playback area
+ - loop: Whether to loop the media resource
+ - muted: Whether to mute the media resource by default
+ - controls: Show user agent controls
+ - loading: Used when determining loading deferral
+ - width: Horizontal dimension
+ - height: Vertical dimension
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-video
+
+Links:
+ - https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-video-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/video
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <video src="1.mp4" poster="1.jpg" type="video/mp4"></video>
+  </body>
+</html>
