@@ -1,0 +1,45 @@
+<!-- 
+The <del> element represents a removal from the document
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Transparent
+
+Attributes:
+ - global
+ - cite: Link to the source of the quotation or more information about the edit
+ - datetime: Date and (optionally) time of the change
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-del
+
+Links:
+ - https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-del-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/del
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <h1>To Do</h1>
+    <ul>
+      <li>Empty the dishwasher</li>
+      <li>
+        <del datetime="2009-10-11T01:25-07:00"
+          >Watch Walter Lewin's lectures</del
+        >
+      </li>
+      <li><del datetime="2009-10-10T23:38-07:00">Download more tracks</del></li>
+      <li>Buy a printer</li>
+    </ul>
+  </body>
+</html>
