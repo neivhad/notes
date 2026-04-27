@@ -1,0 +1,65 @@
+<!-- 
+The <source> element allows authors to specify multiple alternative source sets for <img> elements or multiple alternative media
+resources for media elements. It does not represent anything on its own
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - as a child of a <picture> element, before the <img> element
+ - as a child of a <media> element, before any flow content or <track> elements
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - type: Type of embedded resource
+ - media: Applicable media
+ - src (in <audio> or <video>): Address of the resource
+ - srcset (in <picture>): Images to use in different situations, e.g., high-resolution displays, small monitors, etc.
+ - sizes (in <picture>): Image sizes for different page layouts
+ - width (in <picture>): Horizontal dimension
+ - height (in <picture>): Vertical dimension
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-source
+
+ - The `media` attribute is only evaluated once during the resource selection algorithm for media elements.
+ In contrast, when using the <picture> element, the user agent will react to changes in the environment
+
+Links:
+ - https://html.spec.whatwg.org/multipage/embedded-content.html#the-source-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/source
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <script>
+      function fallback(video) {
+        // replace <video> with its contents
+        while (video.hasChildNodes()) {
+          if (video.firstChild instanceof HTMLSourceElement)
+            video.removeChild(video.firstChild);
+          else video.parentNode.insertBefore(video.firstChild, video);
+        }
+        video.parentNode.removeChild(video);
+      }
+    </script>
+    <video controls autoplay>
+      <source
+        src="video.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+      <source
+        src="video.ogv"
+        type='video/ogg; codecs="theora, vorbis"'
+        onerror="fallback(parentNode)"
+      />
+      ...
+    </video>
+  </body>
+</html>
