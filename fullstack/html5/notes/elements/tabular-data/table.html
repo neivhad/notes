@@ -1,0 +1,61 @@
+<!-- 
+The <table> element represents data with more than one dimension, in the form of a table
+
+Categories:
+ - Flow content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - In this order: optionally a <caption> element, followed by zero or more <colgroup> elements, followed optionally by a <thead>
+element, followed by either zero or more <tbody> elements or one or more <tr> elements, followed optionally by a <tfoot> element,
+optionally intermixed with one or more script-supporting elements (<script>, <template>)
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-table
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-table-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <table>
+    <caption>
+      <strong>Characteristics with positive and negative sides.</strong>
+      <p>
+        Characteristics are given in the second column, with the negative side
+        in the left column and the positive side in the right column.
+      </p>
+    </caption>
+    <thead>
+      <tr>
+        <th id="n">Negative</th>
+        <th>Characteristic</th>
+        <th>Positive</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td headers="n r1">Sad</td>
+        <th id="r1">Mood</th>
+        <td>Happy</td>
+      </tr>
+
+      <tr>
+        <td headers="n r2">Failing</td>
+        <th id="r2">Grade</th>
+        <td>Passing</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
