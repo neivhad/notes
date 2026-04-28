@@ -1,0 +1,61 @@
+<!-- 
+The <colgroup> element represents a group of one or more columns in the table that is its parent, if it has a parent and that is
+a <table> element
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - as a child of a <table> element, after any <caption> elements and before any <thead>, <tbody>, <tfoot>, and <tr> elements
+
+Content model:
+ - If the `span` attribute is present: Nothing
+ - If the `span` attribute is absent: Zero or more <col> and <template> elements
+
+Attributes:
+ - global
+ - span: Number of columns spanned by the element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-colgroup
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-colgroup-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/colgroup
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <table>
+    <caption>
+      <strong>Characteristics with positive and negative sides.</strong>
+      <p>
+        Characteristics are given in the second column, with the negative side
+        in the left column and the positive side in the right column.
+      </p>
+    </caption>
+    <thead>
+      <tr>
+        <th id="n">Negative</th>
+        <th>Characteristic</th>
+        <th>Positive</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td headers="n r1">Sad</td>
+        <th id="r1">Mood</th>
+        <td>Happy</td>
+      </tr>
+
+      <tr>
+        <td headers="n r2">Failing</td>
+        <th id="r2">Grade</th>
+        <td>Passing</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
