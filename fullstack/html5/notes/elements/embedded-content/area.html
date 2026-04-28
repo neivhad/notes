@@ -1,0 +1,58 @@
+<!-- 
+The <area> element represents either a hyperlink with some text and a corresponding area on an image map, or a dead area on
+an image map
+
+Categories:
+ - Flow content
+ - Phrasing content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected, but only if there is a <map> element ancestor
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - alt: Replacement text for use when images are not available
+ - coords: Coordinates for the shape to be created in an image map
+ - shape: The kind of shape to be created in an image map
+ - href: Address of the hyperlink
+ - target: Navigable for hyperlink navigation
+ - download: Whether to download the resource instead of navigating to it, and its filename if so
+ - ping: URLs to ping
+ - rel: Relationship between the location in the document containing the hyperlink and the destination resource
+ - referrerpolicy: Referrer policy for fetches initiated by the element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-area
+
+Links:
+ - https://html.spec.whatwg.org/multipage/embedded-content.html#the-area-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/area
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <img
+      src="/images/menu.gif"
+      alt="Babies™ navigation menu. Select a department to go to its page."
+      usemap="#nav"
+    />
+    <map name="nav">
+      <p>
+        <a href="/clothes/">Clothes</a>
+        <area alt="Clothes" coords="0,0,100,50" href="/clothes/" /> |
+        <a href="/toys/">Toys</a>
+        <area alt="Toys" coords="100,0,200,50" href="/toys/" /> |
+        <a href="/food/">Food</a>
+        <area alt="Food" coords="200,0,300,50" href="/food/" /> |
+        <a href="/books/">Books</a>
+        <area alt="Books" coords="300,0,400,50" href="/books/" />
+      </p>
+    </map>
+  </body>
+</html>
