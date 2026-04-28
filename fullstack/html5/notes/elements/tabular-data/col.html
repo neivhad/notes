@@ -1,0 +1,60 @@
+<!-- 
+If a <col> element has a parent and that is a <colgroup> element that itself has a parent that is a <table> element, then the <col>
+element represents one or more columns in the column group represented by that <colgroup>
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - as a child of a <colgroup> element that doesn't have a `span` attribute
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - span: Number of columns spanned by the element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-col
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-col-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/col
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <table>
+    <caption>
+      <strong>Characteristics with positive and negative sides.</strong>
+      <p>
+        Characteristics are given in the second column, with the negative side
+        in the left column and the positive side in the right column.
+      </p>
+    </caption>
+    <thead>
+      <tr>
+        <th id="n">Negative</th>
+        <th>Characteristic</th>
+        <th>Positive</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td headers="n r1">Sad</td>
+        <th id="r1">Mood</th>
+        <td>Happy</td>
+      </tr>
+
+      <tr>
+        <td headers="n r2">Failing</td>
+        <th id="r2">Grade</th>
+        <td>Passing</td>
+      </tr>
+    </tbody>
+  </table>
+</html>
