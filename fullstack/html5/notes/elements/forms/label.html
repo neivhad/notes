@@ -1,0 +1,84 @@
+<!-- 
+The <label> element represents a caption in a user interface. The caption can be associated with a specific form control, known as
+the <label> element's labeled control, either using the `for` attribute, or by putting the form control inside the label element itself
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Interactive content
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - phrasing content, but with no descendant labelable elements unless it is the element's labeled control, and no descendant <label>
+ elements
+
+Attributes:
+ - global
+ - for: Associate the label with form control
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-label
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-label-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form>
+      <p>
+        <label>Customer name: <input /></label>
+      </p>
+      <p>
+        <label>Telephone: <input type="tel" /></label>
+      </p>
+      <p>
+        <label>Email address: <input type="email" /></label>
+      </p>
+      <fieldset>
+        <legend>Pizza Size</legend>
+        <p>
+          <label> <input type="radio" name="size" /> Small </label>
+        </p>
+        <p>
+          <label> <input type="radio" name="size" /> Medium </label>
+        </p>
+        <p>
+          <label> <input type="radio" name="size" /> Large </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Pizza Toppings</legend>
+        <p>
+          <label> <input type="checkbox" /> Bacon </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Extra Cheese </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Onion </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Mushroom </label>
+        </p>
+      </fieldset>
+      <p>
+        <label
+          >Preferred delivery time:
+          <input type="time" min="11:00" max="21:00" step="900"
+        /></label>
+      </p>
+      <p>
+        <label>Delivery instructions: <textarea></textarea></label>
+      </p>
+      <p><button>Submit order</button></p>
+    </form>
+  </body>
+</html>
