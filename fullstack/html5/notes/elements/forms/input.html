@@ -1,0 +1,120 @@
+<!-- 
+The <input> element represents a typed data field, usually with a form control to allow the user to edit the data
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - If the `type` attribute IS NOT in the Hidden state:
+  - Interactive content
+  - Palpable content
+  - Listed, LABELABLE, submittable, resettable, and autocapitalize-and-autocorrect inheriting form-associated element
+ - If the `type` attribute IS in the Hidden state:
+  - Listed, submittable, resettable, and autocapitalize-and-autocorrect inheriting form-associated element
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+ - accept: Hint for expected file type in file upload controls
+ - alpha: Allow the color's alpha component to be set
+ - alt: Replacement text for use when images are not available
+ - autocomplete: Hint for form autofill feature
+ - checked: Whether the control is checked
+ - colorspace: The color space of the serialized color
+ - dirname: Name of form control to use for sending the element's directionality in form submission
+ - disabled: Whether the form control is disabled
+ - form: Associates the element with a form element
+ - formaction: URL to use for form submission
+ - formenctype: Entry list encoding type to use for form submission
+ - formmethod: Variant to use for form submission
+ - formnovalidate: Bypass form control validation for form submission
+ - formtarget: Navigable for form submission
+ - height: Vertical dimension
+ - list: List of autocomplete options
+ - max: Maximum value
+ - maxlength: Maximum length of value
+ - min: Minimum value
+ - minlength: Minimum length of value
+ - multiple: Whether to allow multiple values
+ - name: Name of the element to use for form submission and in the `form.elements` API
+ - pattern: Pattern to be matched by the form control's value
+ - placeholder: User-visible label to be placed within the form control
+ - popovertarget: Targets a `popover` element to toggle, show, or hide
+ - popovertargetaction: Indicates whether a targeted `popover` element is to be toggled, shown, or hidden
+ - readonly: Whether to allow the value to be edited by the user
+ - required: Whether the control is required for form submission
+ - size: Size of the control
+ - src: Address of the resource
+ - step: Granularity to be matched by the form control's value
+ - type: Type of form control
+ - value: Value of the form control
+ - width: Horizontal dimension
+The `title` attribute has special semantics on this element: Description of pattern (when used with `pattern` attribute)
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-input-button
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-input-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form>
+      <p>
+        <label>Customer name: <input /></label>
+      </p>
+      <p>
+        <label>Telephone: <input type="tel" /></label>
+      </p>
+      <p>
+        <label>Email address: <input type="email" /></label>
+      </p>
+      <fieldset>
+        <legend>Pizza Size</legend>
+        <p>
+          <label> <input type="radio" name="size" /> Small </label>
+        </p>
+        <p>
+          <label> <input type="radio" name="size" /> Medium </label>
+        </p>
+        <p>
+          <label> <input type="radio" name="size" /> Large </label>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Pizza Toppings</legend>
+        <p>
+          <label> <input type="checkbox" /> Bacon </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Extra Cheese </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Onion </label>
+        </p>
+        <p>
+          <label> <input type="checkbox" /> Mushroom </label>
+        </p>
+      </fieldset>
+      <p>
+        <label
+          >Preferred delivery time:
+          <input type="time" min="11:00" max="21:00" step="900"
+        /></label>
+      </p>
+      <p>
+        <label>Delivery instructions: <textarea></textarea></label>
+      </p>
+      <p><button>Submit order</button></p>
+    </form>
+  </body>
+</html>
