@@ -1,0 +1,44 @@
+<!-- 
+The <output> element represents the result of a calculation performed by the application, or the result of a user action
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Listed, labelable, resettable, and autocapitalize-and-autocorrect inheriting form-associated element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content
+
+Attributes:
+ - global
+ - for: Specifies controls from which the output was calculated
+ - form: Associates the element with a form element
+ - name: Name of the element to use in the `form.elements` AP
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-output
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-output-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form
+      onsubmit="return false;"
+      oninput="o.value = a.valueAsNumber + b.valueAsNumber"
+    >
+      <input id="a" type="number" step="any" /> +
+      <input id="b" type="number" step="any" /> =
+      <output id="o" for="a b"></output>
+    </form>
+  </body>
+</html>
