@@ -1,0 +1,60 @@
+<!-- 
+The <button> element represents a button labeled by its contents
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Interactive content
+ - Listed, labelable, submittable, and autocapitalize-and-autocorrect inheriting form-associated element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+ - as the first child of a <select> element
+
+Content model:
+ - Phrasing content, but there must be no interactive content descendant and no descendant with the `tabindex` attribute specified. If
+the element is the first child of a <select> element, then it may also have zero or one descendant <selectedcontent> element
+
+Attributes:
+ - global
+ - command: Indicates to the targeted element which action to take
+ - commandfor: Targets another element to be invoked
+ - disabled: Whether the form control is disabled
+ - form: Associates the element with a <form> element
+ - formaction: URL to use for form submission
+ - formenctype: Entry list encoding type to use for form submission
+ - formmethod: Variant to use for form submission
+ - formnovalidate: Bypass form control validation for form submission
+ - formtarget: Navigable for form submission
+ - name: Name of the element to use for form submission and in the `form.elements` API
+ - popovertarget: Targets a `popover` element to toggle, show, or hide
+ - popovertargetaction: Indicates whether a targeted `popover` element is to be toggled, shown, or hidden
+ - type: Type of button
+ - value: Value to be used for form submission
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-button
+
+ - A <button> (and its `value`) is only included in the form submission if the <button> itself was used to initiate the form submission
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-button-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick="
+        alert('This 15-20 minute piece was composed by George Gershwin.')
+      "
+    >
+      Show hint
+    </button>
+  </body>
+</html>
