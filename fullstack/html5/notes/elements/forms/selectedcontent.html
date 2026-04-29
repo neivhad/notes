@@ -1,0 +1,60 @@
+<!-- 
+The <selectedcontent> element reflects the contents of a <select> element's currently selected <option> element. <selectedcontent>
+elements can be used to declaratively show the selected <option> element's contents within the <select> element's first child <button>
+element
+
+Categories:
+ - Phrasing content
+
+Contexts in which this element can be used:
+ - as a descendant of a <button> element which is a child of a <select> element
+
+Content model:
+ - Nothing
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-selectedcontent
+
+ - The <option> element's `label` attribute can be used to render a visible label for the option, but the <selectedcontent> element
+ will not reflect the content of the `label` attribute
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-selectedcontent-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/selectedcontent
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset name="clubfields" disabled>
+        <legend>
+          <label>
+            <input
+              type="checkbox"
+              name="club"
+              onchange="form.clubfields.disabled = !checked"
+            />
+            Use Club Card
+          </label>
+        </legend>
+        <p>
+          <label>Name on card: <input name="clubname" required /></label>
+        </p>
+        <p>
+          <label
+            >Card number: <input name="clubnum" required pattern="[-0-9]+"
+          /></label>
+        </p>
+        <p>
+          <label>Expiry date: <input name="clubexp" type="month" /></label>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
