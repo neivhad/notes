@@ -1,0 +1,53 @@
+<!-- 
+The <option> element represents an option in a <select> element or as part of a list of suggestions in a <datalist> element
+
+Categories:
+ - select element inner content elements
+ - optgroup element inner content elements
+
+Contexts in which this element can be used:
+ - as a descendant of a <select> element
+ - as a descendant of a <datalist> element
+ - as a descendant of an <optgroup> element
+
+Content model:
+ - If the element has a `label` attribute and a `value` attribute: Nothing
+ - If the element has a `label` attribute but no `value` attribute: Text
+ - If the element has no `label` attribute and is not a descendant of a <datalist> element: Zero or more option element inner content
+ elements
+ - If the element has no `label` attribute and is a descendant of a <datalist> element: Text
+
+Attributes:
+ - global
+ - disabled: Whether the form control is disabled
+ - label: User-visible label
+ - selected: Whether the option is selected by default
+ - value: Value to be used for form submission
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-option
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-option-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/option
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <p>
+        <label>
+          Animal:
+          <input name="animal" list="animals" />
+          <datalist id="animals">
+            <option value="Cat"></option>
+            <option value="Dog"></option>
+          </datalist>
+        </label>
+      </p>
+    </form>
+  </body>
+</html>
