@@ -1,0 +1,53 @@
+<!-- 
+The <textarea> element represents a multiline plain text edit control for the element's raw value
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Interactive content
+ - Listed, labelable, submittable, resettable, and autocapitalize-and-autocorrect inheriting form-associated element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Text
+
+Attributes:
+ - global
+ - autocomplete: Hint for form autofill feature
+ - cols: Maximum number of characters per line
+ - dirname: Name of form control to use for sending the element's directionality in form submission
+ - disabled: Whether the form control is disabled
+ - form: Associates the element with a form element
+ - maxlength: Maximum length of value
+ - minlength: Minimum length of value
+ - name: Name of the element to use for form submission and in the `form.elements` API
+ - placeholder: User-visible label to be placed within the form control
+ - readonly: Whether to allow the value to be edited by the user
+ - required: Whether the control is required for form submission
+ - rows: Number of lines to show
+ - wrap: How the value of the form control is to be wrapped for form submission
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-textarea
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-textarea-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <p>
+        If you have any comments, please let us know:
+        <textarea cols="80" name="comments"></textarea>
+      </p>
+    </form>
+  </body>
+</html>
