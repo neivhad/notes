@@ -1,0 +1,64 @@
+<!-- 
+The <fieldset> element represents a set of form controls (or other content) grouped together, optionally with a caption. The caption is
+given by the first <legend> element that is a child of the <fieldset> element, if any. The remainder of the descendants form the group
+
+Categories:
+ - Flow content
+ - Listed and autocapitalize-and-autocorrect inheriting form-associated element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Optionally, a <legend> element, followed by flow content
+
+Attributes:
+ - global
+ - disabled: Whether the descendant form controls, except any inside <legend>, are disabled
+ - form: Associates the element with a <form> element
+ - name: Name of the element to use in the `form.elements` API
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-fieldset
+
+ - for example disk usage, the relevance of a query result, or the fraction of a voting population to have selected a particular
+ candidate
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-fieldset-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset name="clubfields" disabled>
+        <legend>
+          <label>
+            <input
+              type="checkbox"
+              name="club"
+              onchange="form.clubfields.disabled = !checked"
+            />
+            Use Club Card
+          </label>
+        </legend>
+        <p>
+          <label>Name on card: <input name="clubname" required /></label>
+        </p>
+        <p>
+          <label
+            >Card number: <input name="clubnum" required pattern="[-0-9]+"
+          /></label>
+        </p>
+        <p>
+          <label>Expiry date: <input name="clubexp" type="month" /></label>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
