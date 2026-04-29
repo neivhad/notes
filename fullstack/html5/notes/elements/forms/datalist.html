@@ -1,0 +1,45 @@
+<!-- 
+The <datalist> element represents a set of <option> elements that represent predefined options for other controls. In the rendering,
+the <datalist> element represents nothing and it, along with its children, should be hidden
+
+Categories:
+ - Flow content
+ - Phrasing content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Either: phrasing content.
+ Or: Zero or more <option> and script-supporting elements (<script>, <template>)
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-datalist
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-datalist-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <p>
+        <label>
+          Animal:
+          <input name="animal" list="animals" />
+          <datalist id="animals">
+            <option value="Cat"></option>
+            <option value="Dog"></option>
+          </datalist>
+        </label>
+      </p>
+    </form>
+  </body>
+</html>
