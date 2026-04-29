@@ -1,0 +1,49 @@
+<!-- 
+The <meter> element represents a scalar measurement within a known range, or a fractional value
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Labelable element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Phrasing content, but there must be no <meter> element descendants
+
+Attributes:
+ - global
+ - value: Current value of the element
+ - min: Lower bound of range
+ - max: Upper bound of range
+ - low: High limit of low range
+ - high: Low limit of high range
+ - optimum: Optimum value in gauge
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-meter
+
+ - for example disk usage, the relevance of a query result, or the fraction of a voting population to have selected a particular
+ candidate
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-meter-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <section>
+      <h2>Storage space usage</h2>
+      <p>
+        Storage space usage:
+        <meter value="6" max="8">6 blocks used (out of 8 total)</meter>
+      </p>
+    </section>
+  </body>
+</html>
