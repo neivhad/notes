@@ -1,0 +1,59 @@
+<!-- 
+The <legend> element represents a caption for the rest of the contents of the <legend> element's parent <fieldset> element, if any.
+Otherwise, if the <legend> has a parent <optgroup> element, then the legend represents the <optgroup>'s label
+
+Categories:
+ - None
+
+Contexts in which this element can be used:
+ - as the first child of a <fieldset> element
+ - as the first child of an <optgroup> element
+
+Content model:
+ - If the element is a child of an <optgroup> element: Phrasing content, but there must be no interactive content and no descendant
+ with the `tabindex` attribute.
+ Otherwise: Phrasing content, optionally intermixed with heading content
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-legend
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-legend-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/legend
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset name="clubfields" disabled>
+        <legend>
+          <label>
+            <input
+              type="checkbox"
+              name="club"
+              onchange="form.clubfields.disabled = !checked"
+            />
+            Use Club Card
+          </label>
+        </legend>
+        <p>
+          <label>Name on card: <input name="clubname" required /></label>
+        </p>
+        <p>
+          <label
+            >Card number: <input name="clubnum" required pattern="[-0-9]+"
+          /></label>
+        </p>
+        <p>
+          <label>Expiry date: <input name="clubexp" type="month" /></label>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
