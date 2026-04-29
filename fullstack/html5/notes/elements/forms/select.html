@@ -1,0 +1,51 @@
+<!-- 
+The <select> element represents a control for selecting amongst a set of options
+
+Categories:
+ - Flow content
+ - Phrasing content
+ - Interactive content
+ - Listed, labelable, submittable, and autocapitalize-and-autocorrect inheriting form-associated element
+ - Palpable content
+
+Contexts in which this element can be used:
+ - where phrasing content is expected
+
+Content model:
+ - Zero or one <button> elements if the select is a drop-down box, followed by zero or more select element inner content elements
+
+Attributes:
+ - global
+ - autocomplete: Hint for form autofill feature
+ - disabled: Whether the form control is disabled
+ - form: Associates the element with a <form> element
+ - multiple: Whether to allow multiple values
+ - name: Name of the element to use for form submission and in the `form.elements` API
+ - required: Whether the control is required for form submission
+ - size: Size of the control
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-select
+
+ - A <button> (and its `value`) is only included in the form submission if the <button> itself was used to initiate the form submission
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-select-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <select name="unittype" required>
+      <option value="">Select unit type</option>
+      <option value="1">Miner</option>
+      <option value="2">Puffer</option>
+      <option value="3">Snipey</option>
+      <option value="4">Max</option>
+      <option value="5">Firebot</option>
+    </select>
+  </body>
+</html>
