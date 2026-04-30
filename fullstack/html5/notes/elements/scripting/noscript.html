@@ -1,0 +1,47 @@
+<!-- 
+The <noscript> element represents nothing if scripting is enabled, and represents its children if scripting is disabled.
+It is used to present different markup to user agents that support scripting and those that don't support scripting, by affecting how
+the document is parsed
+
+Categories:
+ - Metadata content
+ - Flow content
+ - Phrasing content
+ - select element inner content elements
+ - optgroup element inner content elements
+
+Contexts in which this element can be used:
+ - In a <head> element of an HTML document, if there are no ancestor <noscript> elements
+ - Where phrasing content is expected in HTML documents, if there are no ancestor <noscript> elements
+
+Content model:
+ - When scripting is disabled, in a <head> element: in any order, zero or more <link> elements, zero or more <style> elements, and zero
+ or more <meta> elements.
+ - When scripting is disabled, not in a <head> element: transparent, but there must be no <noscript> element descendants.
+ Otherwise: text that conforms to the requirements given in the prose
+
+Attributes:
+ - global
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-noscript
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-noscript-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/noscript
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <script src="game-engine.js"></script>
+    <script type="text/x-game-map">
+      ........U.........e
+      o............A....e
+      .....A.....AAA....e
+      .A..AAA...AAAAA...e
+    </script>
+  </body>
+</html>
