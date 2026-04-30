@@ -1,0 +1,43 @@
+<!-- 
+The <dialog> element represents a transitory part of an application, in the form of a small window ("dialog box"), which the user
+interacts with to perform a task or gather information. Once the user is done, the dialog can be automatically closed by
+the application, or manually closed by the user
+
+Categories:
+ - Flow content
+
+Contexts in which this element can be used:
+ - where flow content is expected
+
+Content model:
+ - Flow content
+
+Attributes:
+ - global
+ - closedby: Which user actions will close the <dialog>
+ - open: Whether the <dialog> box is showing
+The `tabindex` attribute must not be specified on dialog elements
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-dialog
+
+ - Authors should use the `autofocus` attribute on the descendant element of the <dialog> that the user is expected to immediately
+ interact with after the <dialog> opens. If there is no such element, then authors should use the `autofocus` attribute on the <dialog>
+ element itself
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-dialog-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <dialog>
+      <label>Product Number <input type="text" readonly /></label>
+      <label>Product Name <input type="text" autofocus /></label>
+    </dialog>
+  </body>
+</html>
