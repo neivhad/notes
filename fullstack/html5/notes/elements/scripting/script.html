@@ -1,0 +1,55 @@
+<!-- 
+The <script> element allows authors to include dynamic script, instructions to the user agent, and data blocks in their documents.
+The element does not represent content for the user
+
+Categories:
+ - Metadata content
+ - Flow content
+ - Phrasing content
+ - Script-supporting element
+
+Contexts in which this element can be used:
+ - Where metadata content is expected.
+ - Where phrasing content is expected.
+ - Where script-supporting elements are expected
+
+Content model:
+ - If there is no `src` attribute, depends on the value of the `type` attribute, but must match script content restrictions
+ - If there is a `src` attribute, the element must be either empty or contain only script documentation that also matches script
+ content restrictions
+
+Attributes:
+ - global
+ - type: Type of script
+ - src: Address of the resource
+ - nomodule: Prevents execution in user agents that support module scripts
+ - async: Execute script when available, without blocking while fetching
+ - defer: Defer script execution
+ - blocking: Whether the element is potentially render-blocking
+ - crossorigin: How the element handles crossorigin requests
+ - referrerpolicy: Referrer policy for fetches initiated by the element
+ - integrity: Integrity metadata used in Subresource Integrity checks [SRI]
+ - fetchpriority: Sets the priority for fetches initiated by the element
+
+Accessibility considerations: https://w3c.github.io/html-aria/#el-details
+
+Links:
+ - https://html.spec.whatwg.org/multipage/sections.html#the-details-element
+ - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details
+ -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Title</title>
+  </head>
+  <body>
+    <script src="game-engine.js"></script>
+    <script type="text/x-game-map">
+      ........U.........e
+      o............A....e
+      .....A.....AAA....e
+      .A..AAA...AAAAA...e
+    </script>
+  </body>
+</html>
